@@ -1,0 +1,240 @@
+\begin{table}[H]
+\centering
+\caption{表3.1 随机矩阵与测试集变换结果}\label{ptabl1}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{电路名}&	\textbf{规模}& \textbf{变换矩阵个数}& \textbf{最小压缩率}& \textbf{最大压缩率}\\
+\midrule
+s5378& (111,214)& 127& 59.64\%& 70.78\%\\
+s9234& (159,247)& 255& 58.89\%& 70.12\%\\
+s13207& (236,700)& 255& 72.17\%& 93.74\%\\
+s15850& (126,611)& 127& 68.14\%& 83.30\%\\
+s38417& (99,1664)& 127& 63.03\%& 75.74\%\\
+s38584& (126,611)& 127& 68.14\%& 83.30\%\\
+平均&        &      &   66.09\%& 78.05\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{表3.2  FDR编码压缩率(\%)}\label{tabl2}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{电路}&	\textbf{直接编码}& \textbf{哈达码变换}& \textbf{最大相容}& \textbf{本方法}\\
+\midrule
+s5378&	47.98&	67.51&	67.86&	68.43\\
+s9234&	43.61&	66.19&	65.71&	66.39\\
+s13207&	81.31&	89.65&	89.92&	91.69\\
+s15850&	66.21&	80.66&	80.73&	81.88\\
+s38417&	43.27&	72.44&	72.84&	73.04\\
+s38584&	60.93&	75.99&	75.34&	75.09\\
+平均&	57.22&	75.41&	75.35&	76.08\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\caption{表3.3  EFDR编码压缩率(\%)}\label{tabl2}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{电路}&	\textbf{直接编码}& \textbf{哈达码变换}& \textbf{最大相容}& \textbf{本方法}\\
+\midrule
+s5378&	53.67&	64.50&	64.52&	65.60\\
+s9234&	48.66&	62.74&	62.62&	62.71\\
+s13207&	82.49&	88.89&	88.03&	90.95\\
+s15850&	68.66&	78.67&	78.83&	78.88\\
+s38417&	62.02&	71.63&	71.76&	71.71\\
+s38584&	64.28&	73.45&	72.37&	74.69\\
+平均&	63.30&	73.30&	73.36&	74.09\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+\caption{表3.4  VIHC编码压缩率(\%)}\label{tabl2}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{电路}&	\textbf{直接编码}& \textbf{哈达码变换}& \textbf{最大相容}& \textbf{本方法}\\
+\midrule
+s5378&	51.75&	69.63&	69.66&	70.78\\
+s9234&	47.23&	69.58&	69.53&	70.12\\
+s13207&	83.55&	92.20&	91.91&	93.74\\
+s15850&	67.97&	82.96&	82.98&	83.30\\
+s38417&	53.39&	74.79&	74.83&	75.74\\
+s38584&	62.30&	78.11&	78.80&	79.50\\
+平均&	61.03&	77.89&	77.83&	78.86\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+\caption{表3.5  RL-Huff编码压缩率(\%)}\label{tabl2}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{电路}&	\textbf{直接编码}& \textbf{哈达码变换}& \textbf{最大相容}& \textbf{本方法}\\
+\midrule
+s5378&	52.58&	64.02&	64.14&	66.73\\
+s9234&	47.26&	60.33&	60.16&	63.16\\
+s13207&	82.49&	88.71&	88.81&	92.23\\
+s15850&	67.35&	77.33&	77.99&	79.47\\
+s38417&	63.32&	69.66&	69.64&	71.43\\
+s38584&	62.40&	71.05&	72.28&	72.91\\
+平均&	62.57&	71.85&	72.17&	74.32\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+\caption{表3.6  ALT-FDR编码压缩率(\%)}\label{tabl2}
+\begin{tabular}{p{2.2cm}p{2.7cm}<{\centering}p{3.3cm}<{\centering}p{2.7cm}<{\centering}p{2.7cm}<{\centering}}
+\toprule
+\textbf{电路}&	\textbf{直接编码}& \textbf{哈达码变换}& \textbf{最大相容}& \textbf{本方法}\\
+\midrule
+s5378&	49.95&	61.62&	62.02&	63.54\\
+s9234&	44.96&	58.31&	58.16&	58.89\\
+s13207&	80.23&	86.52&	86.61&	90.16\\
+s15850&	65.83&	75.76&	75.89&	76.78\\
+s38417&	60.55&	68.40&	67.51&	68.13\\
+s38584&	61.13&	69.70&	71.83&	72.09\\
+平均&	60.58&	70.06&	70.24&	71.60\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\caption{表3.7 本方法与其他压缩方法压缩率比较}\label{tabl2}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{电路名}&	\textbf{SVC[72]	}& \textbf{I-EFDR[73]}& \textbf{LHBE[74]}& \textbf{CCPRL[75]}& \textbf{本方法}\\
+\midrule
+s5378&	51.80&	55.10&	53.10&	61.08&	68.43\\
+s9234& 	50.94& 	52.73& 	52.33& 	62.95&	66.39\\
+s13207& 83.77& 	83.82& 	83.87& 	90.06& 	91.69\\
+s15850& 69.98& 	71.05& 	70.78& 	76.32& 	80.88\\
+s38417& 63.30& 	64.57& 	64.10& 	64.61& 	73.04\\
+s38584& 66.26& 	66.70& 	66.60&	75.38& 	77.06\\
+平均& 	64.34& 	68.01& 	65.13& 	71.73& 	76.28\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+
+s5378&	51.80& 55.10& 53.10& 61.08& 61.08\\
+s9234&	50.94& 52.73& 52.33& 62.95& 61.08\\
+s13207&	83.77& 83.82& 83.87& 90.06& 61.08\\
+s15850&	69.98& 71.05& 70.78& 76.32& 61.08\\
+s38417&	63.30& 64.57& 64.10& 64.61& 61.08\\
+s38584&	66.26& 66.70& 66.60& 75.38& 61.08\\
+平均&	64.34& 68.01& 65.13& 71.73& 61.08\\
+
+公式：
+
+T=1-e^{-T}=1-e^{(-λ\lg⁡N)}\times100\%
+
+\begin{equation}\label{emd}
+\centering
+      C_N^m=\frac{N!}{(m!(N-m))}
+               \end{equation}
+
+对于直接出现在文字中的公式需要使用&&才可以写。
+
+
+矩阵如下所示：
+\begin{equation}
+\left[
+\begin{array}{ccccccc}
+   1& -1& 1& 1& 1& 0& -1\\
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cccccccc}
+    1&   1&   1&-1&   1&-1&-1&   1\\
+    1&   1&-1&   1&   1&-1&   1&-1\\
+    1&-1&-1&-1&   1&   1&   1&   1\\
+    1&-1&   1&   1&-1&-1&   1&   1\\
+    1&   1&-1&   1&-1&   1&-1&   1\\
+    1&-1&   1&   1&   1&   1&-1&-1\\   
+    1&   1&   1&-1&-1&   1&   1&-1\\
+\end{array}
+\right]
+\left[
+\begin{array}{cccccccc}
+   2& -2& 0& 0& 0& 0& -2& 5\\
+\end{array}
+\right]
+\end{equation}
+
+
+
+
+
+
+伪代码：
+
+\begin{algorithm}[!h]
+	\caption{VectorDecomposition(T)}%算法标题
+	\begin{algorithmic}%一行一个标行号
+        \STATE $N:$ $Number$ $of$ $vectors$
+		\STATE $M:$ $Number$ $of$ $inputs$
+        \STATE $L:$ $LFSR$ $Matrix$
+        \STATE $T[1:N, 1:M]:$ $Test$ $set$ $of$ $dimensions$ $N*M$
+        \STATE $Initialization( T )$     // 预处理测试集合
+		\FOR{$i=1$ to $M$}
+        \STATE $p$ = $L*T[1:N, i]$      //测试集中每一列与位流相乘生成系数矩阵 
+        \STATE $k$ = $max( p )$         //在系数矩阵p中获取对应下表索引k 
+		\ENDFOR
+		\STATE $Prominent$ = $L[k]$ //生成主分量
+        \STATE $Residual$ = $T[1:N, i]$ $XOR$ $Prominent$   //获取残分量集
+        \STATE $ProminentComponentSet.add(Prominent)$
+        \STATE $ResidualComponentSet.add(Residual)$
+        \STATE $Return ProminentComponentSet, ResidualComponentSet$  //返回所需数据
+	\end{algorithmic}
+\end{algorithm}
+
+画图：
+
+要注意长度和高度就ok，自己根据自己的图片作参考
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=6cm,width=10cm,angle=0,scale=1]{figures//module.eps}
+  \caption{模块网络中的调控关系}\label{module}
+     \end{figure}
+
+
+图二：
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm,angle=0,scale=1]{module-network.eps}
+  \caption{模块网络迭代学习的过程}\label{module-network}
+     \end{figure}
+
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=10cm,width=6cm,angle=0,scale=1]{frame1.eps}
+  \caption{基于模块网络的整合方法的框架图}\label{frame1}
+     \end{figure}
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+\ttl@change@i {\@ne }{chapter}{0em}{\xiaosi \hei }{\prechaptername ~~\thecontentslabel ~~\postchaptername ~~~}{}{\titlerule *[5pt]{$\cdot $}\xiaosi \contentspage }\relax 
+\ttl@change@v {chapter}{}{}{}\relax 
+\ttl@change@i {\@ne }{section}{2em}{\xiaosi \song }{\thecontentslabel \quad }{}{\hspace {.25em}\titlerule *[5pt]{$\cdot $}\xiaosi \contentspage }\relax 
+\ttl@change@v {section}{}{}{}\relax 
+\ttl@change@i {\@ne }{subsection}{4em}{\xiaosi \song }{\thecontentslabel \quad }{}{\hspace {.25em}\titlerule *[5pt]{$\cdot $}\xiaosi \contentspage }\relax 
+\ttl@change@v {subsection}{}{}{}\relax 
+\contentsline {chapter}{学位论文原创性声明和学位论文版权使用授权书}{I}{section*.2}
+\contentsline {chapter}{摘\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 要}{II}{section*.3}
+\contentsline {chapter}{Abstract}{III}{section*.5}
+\contentsline {chapter}{目\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 录}{V}{section*.7}
+\contentsline {chapter}{插图索引}{VII}{section*.9}
+\contentsline {chapter}{附表索引}{VIII}{section*.11}
+\contentsline {chapter}{\numberline {1}绪论}{2}{section*.13}
+\contentsline {section}{\numberline {1.1}研究背景及研究意义}{2}{section*.14}
+\contentsline {section}{\numberline {1.2}集成电路测试}{3}{section*.15}
+\contentsline {subsection}{\numberline {1.2.1}测试}{3}{section*.16}
+\contentsline {subsection}{\numberline {1.2.2}生产测试和功能测试}{4}{section*.18}
+\contentsline {subsection}{\numberline {1.2.3}可测性设计}{4}{section*.19}
+\contentsline {section}{\numberline {1.3}国内外研究现状}{5}{section*.20}
+\contentsline {section}{\numberline {1.4}本文主要工作及组织结构}{8}{section*.24}
+\contentsline {chapter}{\numberline {2}测试向量压缩}{10}{section*.25}
+\contentsline {section}{\numberline {2.1}测试压缩原理}{10}{section*.26}
+\contentsline {section}{\numberline {2.2}编码压缩}{10}{section*.27}
+\contentsline {subsection}{\numberline {2.2.1}游程编码}{11}{section*.29}
+\contentsline {subsection}{\numberline {2.2.2}字典编码}{12}{section*.32}
+\contentsline {subsection}{\numberline {2.2.3}统计编码}{13}{section*.34}
+\contentsline {section}{\numberline {2.3}非编码压缩}{14}{section*.37}
+\contentsline {subsection}{\numberline {2.3.1}基于线性解压缩}{14}{section*.38}
+\contentsline {subsection}{\numberline {2.3.2}基于广播扫描}{15}{section*.40}
+\contentsline {section}{\numberline {2.4}哈达码变换}{16}{section*.42}
+\contentsline {subsection}{\numberline {2.4.1}基本原理}{16}{section*.43}
+\contentsline {subsection}{\numberline {2.4.2}哈达码矩阵以及变换的基本流程}{16}{section*.44}
+\contentsline {subsection}{\numberline {2.4.3}哈达码变换的优缺点}{17}{section*.45}
+\contentsline {subsection}{\numberline {2.4.4}使用聚类思想构造主分量集合}{17}{section*.46}
+\contentsline {section}{\numberline {2.5}小结}{17}{section*.47}
+\contentsline {chapter}{\numberline {3}使用预填充策略处理数据集}{19}{section*.48}
+\contentsline {section}{\numberline {3.1}变换拆分}{19}{section*.49}
+\contentsline {section}{\numberline {3.2}预填充测试集}{21}{section*.52}
+\contentsline {subsection}{\numberline {3.2.1}直接填充与策略填充}{21}{section*.53}
+\contentsline {subsection}{\numberline {3.2.2}选取基向量}{23}{section*.54}
+\contentsline {section}{\numberline {3.3}实验结果与分析}{23}{section*.55}
+\contentsline {section}{\numberline {3.4}小结}{27}{section*.63}
+\contentsline {chapter}{\numberline {4}使用聚类算法提高压缩率}{28}{section*.64}
+\contentsline {section}{\numberline {4.1}kmeans聚类算法}{28}{section*.65}
+\contentsline {section}{\numberline {4.2}聚类算法结合测试集选取基向量}{31}{section*.70}
+\contentsline {subsection}{\numberline {4.2.1}聚类算法的选择}{31}{section*.71}
+\contentsline {subsection}{\numberline {4.2.2}基向量的选取}{32}{section*.72}
+\contentsline {subsection}{\numberline {4.2.3}主分量集的获取}{33}{section*.74}
+\contentsline {section}{\numberline {4.3}实验结果与分析}{34}{section*.75}
+\contentsline {subsection}{\numberline {4.3.1}根据电路大小确定基向量数}{34}{section*.76}
+\contentsline {subsection}{\numberline {4.3.2}动态选取基向量数}{37}{section*.84}
+\contentsline {section}{\numberline {4.4}小结}{41}{section*.93}
+\contentsline {chapter}{\numberline {5}使用kmeasn++算法结合位翻转算法进一步提高压缩率}{42}{section*.94}
+\contentsline {section}{\numberline {5.1}相关概念}{42}{section*.95}
+\contentsline {subsection}{\numberline {5.1.1}故障检测冗余度}{42}{section*.96}
+\contentsline {subsection}{\numberline {5.1.2}位翻转}{42}{section*.97}
+\contentsline {subsection}{\numberline {5.1.3}位翻转应用于压缩}{42}{section*.98}
+\contentsline {section}{\numberline {5.2}翻转算法}{43}{section*.100}
+\contentsline {section}{\numberline {5.3}实验结果与分析}{44}{section*.102}
+\contentsline {section}{\numberline {5.4}小结}{45}{section*.106}
+\contentsline {chapter}{结论与展望}{46}{section*.107}
+\contentsline {chapter}{参考文献}{49}{section*.110}
+\contentsline {chapter}{致\hskip 1em\relax 谢}{55}{section*.112}
+\contentsline {chapter}{附录A 发表论文和参加科研情况说明}{56}{section*.114}
+\contentsfinish 

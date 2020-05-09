@@ -1,0 +1,213 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{基于代谢通路网络的亚型驱动基因与通路的挖掘}
+\section{引言}
+
+人类疾病不是少数单个基因异常的结果，而是细胞内和细胞间复杂的组织链路和器官系统扰动的结果。已有研究表明多基因疾病是在复杂的网络中进行交互，在各种生物过程产生的，而不是从一个单一的效应产物的异常引起而发生的。所以，许多细胞组分执行它们的功能时会和同一个细胞内的其他组分甚至不同的细胞组分有相互协同。在后基因时代，生命科学的研究模式已经从单一层面转向多层面结合，从局部转向整体。针对癌症的研究模式已经从“序列-$>$结构-$>$功能”向着“相互作用-$>$网络-$>$ 功能”转变。目前对癌症的研究还处在探索阶段。随着计算科学的发展，对癌症的致病因素的研究主要分为四个层面：核苷酸层面、基因层面、pathway层面以及网络层面\cite{Chen2014Deciphering}。核苷酸层面和基因层面主要关注于局部个体，而pathway和网络层面从系统的层面对癌症致病机制进行解释。基于pathway分析疾病的方式解决了基于单个基因研究方法的局限性，但仍然存在着一些不足，如忽略了多个pathway之间的相互作用关系以及上下游之间的影响等。所以研究者们开始从网络层面来对癌症进行更加全面和系统的研究分析。随着高通量技术的发展，研究者们利用大量的生物实验数据对网络进行构造。另外，网络中的相互作用关系，最直接的体现是在pathway中，基于网络的方式在人类疾病方面有多种潜在的生物和临床应用。通过基于pathway的网络分析研究，可以更好地了解细胞的相互作用，能够为药物开发提供更好的目标识别。
+
+Pathway是一个细胞中的基因、蛋白质、RNA、小分子化合物等各类化合物，以及它们相互调节、相互作用的过程。这一系列的反应会导致细胞的特定变化，例如引发分子的组装、各种复杂的分子装配运输和化合物催化、基因的关闭、开启、上调和下调等。常见的pathway 主要包括代谢pathway、信号传导pathway和基因调控pathway，是一系列物质成分的生物网络，形象地表示了生物过程或生物反应。目前pathway的主要应用有：
+
+（1）作为先验知识。基因组重测序项目和全基因组关联性研究的实验结果均可以通过pathway富集分析来进行解释。另外，还可以将pathway相关信息作为先验知识来判断实验结果的准确性。
+
+（2）应用于各类生物网络等其他生物学研究中。许多癌症相关的pathway，结合先验知识或者结合生物实验数据，从而构成pathway 网络。将生物通路蕴含的信息和生物网络构建的拓扑属性，从而检测致病基因以及疾病亚型的相关信息。本文研究的一个创新点就是将生物通路的相关信息运用到基因相互作用网络中，比较乳腺癌亚型之间pathway网络的差别，从而发现特定亚型中变化相对显著的pathway。
+
+此外，癌症作为一种遗传性疾病，是有良性病变到恶性发生一系列突变的过程。转化过程伴随着细胞代谢的变化，从而为癌细胞提供生长和增殖的能量需求。Otto Warburg\cite{Warburg1924U}最先提出癌细胞中细胞代谢失调问题。他提出即使在有氧存在下，癌细胞的代谢主要依赖于糖酵解，而正常细胞能够充分氧化线粒体中的葡萄糖。目前随着技术的快速发展，研究者能够更全面地检查癌症代谢的复杂性，并发现其他代谢途径（如核苷酸和蛋白质合成）在癌症中能够被激活。尽管癌症的这些代谢特征已被用于癌症的诊断和治疗，但它们更广泛的临床意义仍需要更深入研究。如何结合pathway和网络信息来识别显著的通路和基因成为研究的一个热点。
+
+\section{一种基于pathway网络的驱动基因与驱动通路的识别方法}
+已有研究表明肿瘤驱动因子的单碱基突变并不是影响癌症发生的唯一因素，而拷贝数变化是我们常常忽略的重要方面。癌细胞中超过90\% 的遗传变化都是缺失或获得一个基因的拷贝而非突变。一个肿瘤细胞可能由一个拷贝或者三个拷贝而非正常的拷贝。为了发现因基因的拷贝缺失或扩增而显著破坏的信号通路，我们提出一种基于pathway 网络的驱动基因与信号通路识别方法。
+
+\subsection{pathway基因初始权重的获取}
+
+在蛋白质相互作用网络中，节点的度是一个简单又重要的属性。它表现的是网络某种内在的特征，是可以区分不同类型网络的指标，与网络规模的大小无关。大多数的蛋白质只与其他少数的蛋白质发生相互作用，而少数的蛋白质与大量的蛋白质发生相互作用。少量的高度节点是整个网路的中枢节点，他们对网络的结构和功能发挥着关键性作用。这里针对通路网络，我们设定其通路网路中基因的重要性与基因在通路网络中的度成正比。为了识别出通路中的重要基因，我们利用通路网络中基因节点度来评估基因对这一通路的重要程度。对于每个信号通路网络，每个基因节点j的度$k_j$是指与该节点连接的其他节点的总数。其定义公式为：
+\begin{equation}\label{degree}
+\centering
+       k_j=\left | E(j,v) \right |   j,v\epsilon V.
+               \end{equation}
+其中，$E(j,v)$表示的是以节点j和节点v为端点的边。
+
+在不同的信号通路中，同一个基因可能出现在多个的通路中，而每一条通路都有其特定的功能作用。基于词频-逆文档频率（TFIDF）的思想，即一个词在一个集合或者语料库中对一个文档的重要性，与该词出现在文档中的次数成比例增加，而与出现在所有文档中的频率成反比，我们对某些频繁出现在多个通路网络中的基因的权重进行调整。因此，结合通路网络中基因节点的度衡量，我们认为通路基因的权重与通路网络中基因度的大小成正比，与它在所有通路中出现的频率成反比。则基因$j$ 的权重计算定义为：
+\begin{equation}\label{Weight}
+\centering
+       W_j=k_j*\log \frac{\left | D \right |}{1+\left | \left \{ j\epsilon  d_{i} \right \} \right |}.
+               \end{equation}
+
+其中，$k_j$是该通路中基因的度，$|D|$为所用通路的数目，$\left | \left \{ j\epsilon  d_{i} \right \} \right |$为包含基因$j$的通路个数。
+
+
+\subsection{pathway网络分析构建}
+
+网络分析是对每一条KEGG通路，通过利用蛋白质相互作用（PPIs）数据对通路中的基因进行网络构建。我们利用上章节的从GISTIC2.0 得到的乳腺癌的CNV 数据来进行分析。同时，在网络分析过程中，将小鼠和酵母的同源基因数据融合到网络中，从而利用基因的剂量敏感信息来对pathway网络进行评估。
+
+对于每一个构建的pathway网络，我们计算每一条边和基因节点的得分。连接两个基因的边得分是分别通过拷贝数变化缺失或者扩增来计算。给定基因G1和基因G2的一条边，则连接边的得分计算为：
+
+对于$either(G1,G2)GISTIC2.0<0$（至少一个基因是缺失的）：
+\begin{equation}\label{deletion}
+\centering
+       EdgeDeletionScore(G1,G2)=Minimum(ScoreG1,ScoreG2).
+               \end{equation}
+
+对于$both(G1,G2)GISTIC2.0>=0$（都不是缺失的）：
+\begin{equation}\label{Weight}
+\centering
+       EdgeAmplificationScore(G1,G2)=Maximum(ScoreG1,ScoreG2).
+               \end{equation}
+其中，每个基因G的得分ScoreG计算为：
+\begin{equation}\label{Weight}
+\centering
+       ScoreG=GDS*GISTIC*W_G.
+               \end{equation}
+这里，$GISTIC$得分表示的是$(-2,-1,0,1,2)$中某个取值，$-2$ 为双倍缺失，$-1$ 为单等位基因缺失，$0$ 表示无体细胞变化，$1$ 表示单等位基因扩增，$2$表示双倍扩增。$GDS$表示的是基因剂量敏感信息，$1$表示没有信息，$2$表示酵母信息，$3$ 表示小鼠信息。$W_G$ 表示的是上节中计算的基因权重。
+
+对于癌症类型中的每个通路，首先计算出每个患者边得分的总和，然后将这个通路模块的最小可能缺失得分归一化，也就是通路中有着等位基因缺失的的每个基因所产生的得分。对每个患者的得分进行归一化后，然后进行平均从而得到该通路在这个癌症类型中所产生的平均网络得分抑制或增强。
+
+每种癌症类型都有其独特的染色体缺失或扩增分布。相较于有着较稳定的拷贝数变异的癌症，有着高度拷贝数变异的癌症对于通路中随机缺失或扩增有着更高的可能性。所以我们将得到的pathway模块得分分布与同一癌症中所有拷贝数变异数据中随机产生的pathway模块得分分布进行比较，同样通过随机的基因数据也重新产生一个边得分。因此使用相同的方法计算出两个分布：一个是观察得到的癌症数据对应的pathway模块得分分布；另一个是随机数据相对应的pathway模块得分分布。最后将两个分布进行统计比较，为了提高输出P值的置信度，我们将整个pathway模块得分过程运行1000次，对得到的P值取其对数$\log_{10}(p value)$并计算其平均值。
+
+
+\section{实验结果与分析}
+
+我们提出了一种基于pathway模块网络的方法来识别出乳腺癌不同亚型中的驱动基因与驱动通路。我们分析了有着高度噪声遗传背景的体细胞拷贝数突变数据，并且结合其他两种信息来更好的理解通路信息的遗传特性：一种是蛋白质相互作用数据，来优化在同一通路中对其他基因有着调控作用的基因；另一种是同源基因数据，来优化当单个基因改变时而影响生物意义的基因。
+乳腺癌拷贝数突变数据同样来自TCGA下载的485个癌症样本，其中Her2亚型55个，Basal亚型92个，LumA亚型216个，LumB亚型122 个。蛋白质相互作用（PPIa）数据从BioGRID数据库中下载。同源信息数据酵母数据从YeastMine数据库中获得，小鼠数据从Mouse Genome Informatics或者MouseMine 数据库中下载。并且本文所研究的通路全部来自KEGG中的代谢通路。
+
+Pathway网络得分主要分为以下四个步骤:(1)从BioGRID\cite{chatr2014biogrid} 库中建立pathway的基因之间的相互作用网络；(2) 优化包含缺失或扩增的相互作用关系；(3)计算包含缺失或扩增的拷贝数变异基因的相互作用边得分；(4)计算同一分子通路中所有相互作用边得分总和。将癌症数据得到的pathway 得分与随机数据产生的pathway得分进行对照，并运行1000 次从而产生P 值。这样能够使得在高噪声背景下也能够得到在特定癌症中有着显著变化的通路。另外，pathway网络得分计算也能够评估通路中每个基因在pathway模块中的贡献，从而对通路中每个基因的重要性进行排序。
+
+\subsection{代谢通路在不同亚型中的活性}
+
+我们对四种乳腺癌亚型数据进行pathway网络得分分析，并选取P值小于0.01的通路。通过对网络得分的计算，能够将每个pathway网络得分进行抑制或增强分类。图\ref{heatmap_pathway}表示的是四种亚型所选择的pathway得分类别热图。从图中可以看出，红色代表的是抑制通路，绿色代表的是增强通路。其中，大部分的通路在四种亚型中属于抑制通路，并且同一通路能够对不同的癌症亚型都产生重要作用，也有一些通路只出现在一种亚型中，说明这些通路对特定的亚型是起到特异性作用的。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=10cm,width=15cm,angle=0,scale=1]{heatmap_pathway.eps}
+  \caption{不同通路在四种乳腺癌亚型中所属通路活性的热力图.}\label{heatmap_pathway}
+\end{figure}
+
+
+针对抑制通路和增强通路，我们对四种乳腺癌亚型的分布进行了分析。图\ref{Fig:side:a1}展示了抑制通路在四种不同亚型中的分布情况。从中我们看到有5条通路同时在四种亚型中都起到了抑制作用，同时出现在3个或者2 个亚型中的通路也有43条。而只出现在LumA亚型中通路有3条，在LumB的有7条，在Basal中的有6条，而没有一条只出现在HER2亚型中。同样，图\ref{Fig:side:b1}展示了增强通路在四种不同亚型中的分布情况。其中有3条同时出现在了四种亚型中，另外同时出现在2或者3个亚型中的有14条通路。而只出现在其中一种亚型的有LumA中的1条，HER2中的1条，Basal中的10条，而没有一条通路只出现在LumB中。
+\begin{figure}[H]
+\centering
+\subfigure[ ]{
+\label{Fig:side:a1}
+\includegraphics[width=2.6in]{hap_venn.eps}
+}
+\subfigure[ ]{
+\label{Fig:side:b1}
+\includegraphics[width=2.6in]{trig_venn.eps}
+}
+\caption{四种不同乳腺癌亚型中抑制通路和增强通路的分布.}
+\end{figure}
+
+\subsection{癌症亚型的共性与特异性}
+我们通过提出的pathway网络方法对四种乳腺癌亚型分别进行分析，识别出每种亚型的候选驱动通路。从得到的结果中我们得出同时出现在四种亚型中的通路主要有精氨酸与脯氨酸代谢（Arginine and proline metabolism）、咖啡因代谢（Caffeine metabolism）、柠檬酸循环（Citrate cycle）、β-丙氨酸代谢（beta-Alanine metabolism）、类固醇生物合成（Steroid biosynthesis）、糖基磷脂酰肌醇锚定合成（GPI-anchor biosynthesis） 等。其中精氨酸与脯氨酸代谢通路与咖啡因代谢通路其网络得分较高，并且我们选择出通路中基因得分前十的基因，发现基本上选出的重要基因是相同的。我们对选出的其中5个基因在四种不同癌症亚型中的突变情况进行分析。如图\ref{pathway_common}所示，我们可以看出SQLE、NAT1、HSD17B7等基因在四种癌症亚型中的突变频率都在0.5以上，有的甚至达到了0.8。并且有研究发现SQLE是一个重要的代谢致癌基因，是乳腺癌治疗的一个药物靶标\cite{Brown2016Squalene}。SQLE 过渡表达在致癌过程中更为普遍，是一个预后不良的独立预后因素。Wang等人\cite{Wang2015Synergistic} 发现HSD17B7是雌激素依赖乳腺癌的一个新靶点，它调控了E2（雌二醇）和DHC（二羟基睾酮）的平衡。NAT1 在乳腺癌组织中的过表达与雌激素受体表达有关，可以作为乳腺癌预防和治疗的靶点\cite{Stepp2018Genetic}。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=8cm,width=12cm,angle=0,scale=1]{pathway_common.eps}
+  \caption{四种亚型共同识别出的驱动基因的突变频率.}\label{pathway_common}
+\end{figure}
+
+乳腺癌四种亚型中的重要性通路中，我们分别对特定亚型选取重要通路。并根据在通路中每个基因的重要性进行排序，选取通路中得分较高的基因作为我们的候选驱动基因，最后我们过滤掉出现在多个亚型中的候选驱动基因，仅剩下特定亚型的基因作为亚型特异性驱动基因。四种癌症亚型的特异性驱动基因如表\ref{tabl1}所示。
+
+
+\begin{table}[H]
+\centering
+\caption{四种乳腺癌亚型的候选特异性驱动基因.}\label{tabl1}
+\begin{tabular}{l|cc|cc|cc}
+\toprule
+\textbf{HER2}&	\multicolumn{2}{c|}{\textbf{Basal}}& \multicolumn{2}{c|}{\textbf{LumA}}&  \multicolumn{2}{c}{\textbf{LumB}}\\
+\midrule
+CDIPT& DHFR& HEXB& POLR2C& ADSL& LIPT1& SRM\\
+ETNK2&	FPGS&	GNPDA1&	TK2&	APRT&	LIPT2&	GOT1\\
+LPGAT1&	MOCS2&	HK3&	DHODH&	POLR2C&	ACOT7&	TAT\\
+PTDSS1&	PCBD2&	GFPT2&	POLR2F&	GUCY1A2&	ACOT2&	ENOPH1\\
+GNPAT&	ALPL&	MPI&	POLR3H&	POLR3H&	ACOT1&\\
+	&ACSL6&	CA9&	ST3GAL2&	PPOX&	ACOT4&\\
+	&ACACB&	CA14&	ST6GALNAC3&	EARS2&	BAAT&\\
+	&ACSL1&	GLUL&	ST6GALNAC5&	HMOX2&	GOT2&\\
+	&OXSM&	CA1&	ST8SIA5&	EPRS&	&\\
+	&ACSL3&	CA2&	HEXA&	BLVRA&	&\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+在上表中，对于LPGAT1基因，通过亚细胞分离与免疫组织化学分析，该基因位于内质网中。Northern印迹分析表明人类的LPGAT1分布广泛，并且在不同的组织中具有不同的动态功能作用\cite{Yang2004Identification}。DHFR基因在叶酸代谢中扮演者一个重要角色，是氨甲叶酸抗肿瘤药的一个靶分子。DHFR细胞表达水平的增加是对于氨甲叶酸的一种肿瘤耐药机制，其表达水平的上调与乳腺癌的致病机理有关\cite{Nakano2017A}。FPGS在细胞内叶酸稳态中起到关键作用，它的调控可能影响少数基因在生物通路中的DNA甲基化和基因表达。同时也在细胞发展、细胞周期、细胞凋亡和分子运输上影响了差异表达基因\cite{Kim2016Effects}。LIPT2是一种参与人类关键能量代谢酶的翻译后修饰的蛋白质。线粒体蛋白LIPT2 的错误靶向性能够导致细胞的凋亡\cite{Bernardinelli2017Mis}。ADSL缺失是一种罕见的常染色体遗传病，它引起嘌呤代谢缺失，从而导致神经和生理性的疾病\cite{Ray2015Structural}。
+
+\subsection{亚型分类验证}
+
+\subsection{驱动通路生存分析}
+生存分析是对癌症患者的生存时间的分布规律进行分析，同时对生存时间和相关因素之间关系进行研究的一种统计分析方法。生存分析对人群寿命的研究、各种慢性疾病的现场追踪研究，临床疗效试验和动物试验等研究中起着举足轻重的作用，在医学科学研究中具有广泛且重要的应用价值。我们利用R 语言survival 包来预测KM （Kaplan-Meier）生存曲线，用来判断癌症患者的生存率。在生存曲线中，横坐标表示癌症个体存活的时间，纵坐标表示当前生存的患者数占总患者数的比率。并且通过log-rank检验得到Pvalue 对生存曲线进行评估。根据Pvalue 的大小来判断不同组之间的显著性，若$Pvalue<0.01$，则认为曲线之间具有差异显著性。图\ref{survival_analysis}表示的是Steroid biosynthesis 通路基因在Her2 和Basal亚型样本中的KM生存曲线。从图中我们可以看出该通路的KM生存曲线能够很好地反映实际中患者的生存率。该通路基因的表达水平高低对癌症患者的生存时间有着紧密联系，在Her2和Basal两个亚型中通路欠表达的的生存时间比过表达的生存时间短，并且都随着时间的推移其生存概率越来越低。
+\begin{figure}[H]
+\centering
+\subfigure[ ]{
+\label{Fig:side:a}
+\includegraphics[width=3.0in]{Steroid-biosynthesis_her20.0423.eps}
+}
+\subfigure[ ]{
+\label{Fig:side:b}
+\includegraphics[width=3.0in]{Steroid-biosynthesis_basal0.0791.eps}
+}
+\caption{Steroid biosynthesis通路在Her2和Basal中的KM生存曲线.}
+\label{survival_analysis}
+\end{figure}
+
+\subsection{功能性分析}
+为了验证基因是否具有生物学意义，利用基因本体论来对亚型驱动基因进行分析。同样，我们利用R包ClusterProfiler来对驱动基因进行GO功能注释和KEGG通路富集分析。在基因本体论中主要存在分子功能（molecular function，MF）、生物过程（biological process，BP）和细胞成分（cellular component，CC）三个部分。这里主要在生物过程方面对基因进行功能注释分析，生物过程 是由分子功能的有序组合和协作，是一个具有多个步骤的过程，从而达到更广泛的生物功能。我们选取p值小于0.01的功能注释，图\ref{GO_analysis}给出了每种亚型前20个富集的GO功能注释。从图\ref{Fig:side:go1}中我们可以看出Her2亚型主要富集的生物过程有甘油磷酸酯代谢过程（glycerophospholipid metabolic process）、甘油酯代谢过程（glycerolipid metabolic process）、磷脂代谢过程（phospholipid metabolic process）等；图\ref{Fig:side:go2}中可以看出Basal主要富集在硫化合物代谢（sulfur compound metabolic process）、辅酶生物合成（coenzyme biosynthetic process）、辅因子生物合成（cofactor biosynthetic process）等生物过程；从图\ref{Fig:side:go3}看出LumA亚型中主要富集的生物过程有唾液酸化（sialylation）、鞘糖脂代谢过程（glycosphingolipid metabolic process）、脂多糖代谢过程（liposaccharide metabolic process）、色素代谢过程（pigment metabolic process）等；图\ref{Fig:side:go4}展示了LumB亚型主要富集在脂酰CoA代谢（acyl-CoA metabolic process）、参与羧酸生物合成（carboxylic acid biosynthetic process）、参与有机酸生物合成（organic acid biosynthetic process）、小分子生物合成（small molecule biosynthetic process）等重要生物过程。这些生物过程主要负责细胞代谢的物质合成等重要过程，与癌细胞的生殖代谢有着紧密联系。
+\begin{figure}[H]
+\centering
+\subfigure[ ]{
+\label{Fig:side:go1}
+\includegraphics[width=3.0in]{GO_her2.eps}
+}
+\subfigure[ ]{
+\label{Fig:side:go2}
+\includegraphics[width=3.0in]{GO_basal.eps}
+}
+\subfigure[ ]{
+\label{Fig:side:go3}
+\includegraphics[width=3.0in]{GO_luma.eps}
+}
+\subfigure[ ]{
+\label{Fig:side:go4}
+\includegraphics[width=3.0in]{GO_lumb.eps}
+}
+\caption{不同亚型调控基因的生物过程注释分析. }\label{GO_analysis}
+\end{figure}
+
+为了进一步解释调控基因在驱动模式参与了重要的生物通路，我们对亚型驱动基因进行了KEGG通路富集分析。图\ref{KEGG_analysis}给出了亚型驱动基因中重要的富集通路的气泡图。图\ref{Fig:side:p1}中我们可以看出在Her2 亚型的驱动基因主要富集在甘油磷酸酯代谢（Glycerophospholipid metabolism）和肌醇磷酸代谢（Inositol phosphate metabolism）等重要通路；图\ref{Fig:side:p2}展示了Basal亚型的驱动基因主要富集的重要通路有脂肪酸生物合成（Fatty acid biosynthesis）、氮代谢（Nitrogen metabolism）、叶酸合成（Folate biosynthesis）等；图\ref{Fig:side:p3}中可以看出LumA亚型主要富集在卟啉和叶绿素代谢途径（porphyrin and chlorophyll metabolism）、嘌呤代谢（Purine metabolism）、嘧啶代谢（Pyrimidine metabolism）、RNA聚合酶（RNA polymerase）等重要通路；图\ref{Fig:side:p4}呈现了LumB亚型主要富集的重要通路有不饱和脂肪酸生物合成（Biosynthesis of unsaturated fatty acids）、半胱氨酸和蛋氨酸代谢（Cysteine and methionine metabolism）、脂肪酸延长（Fatty acid elongation）、苯丙氨酸代谢（Phenylalanine metabolism）等。其中一些重要的通路途径与癌症的特征高度相关，对癌症的致病机理产生重要影响，如嘌呤代谢通路和嘧啶代谢通路与乳腺癌有着密切的关系。
+
+\begin{figure}[H]
+\centering
+\subfigure[ ]{
+\label{Fig:side:p1}
+\includegraphics[width=2.5in,height=1.9in]{pbubble_her2.eps}
+}
+\subfigure[ ]{
+\label{Fig:side:p2}
+\includegraphics[width=3.1in,height=1.9in]{pbubble_basal.eps}
+}
+\subfigure[ ]{
+\label{Fig:side:p3}
+\includegraphics[width=3.0in,height=1.9in]{pbubble_luma.eps}
+}
+\subfigure[ ]{
+\label{Fig:side:p4}
+\includegraphics[width=3.0in,height=1.9in]{pbubble_lumb.eps}
+}
+\caption{不同亚型Pathway富集分析.}\label{KEGG_analysis}
+\end{figure}
+
+\section{本章小结}
+
+本章提出了一种基于pathway网络模块的驱动通路与驱动基因识别方法。主要利用基因相互作用网络、拷贝数突变和同源信息数据来构建通路网络。首先对通路中的基因利用拷贝数突变和同源信息数据来对通路中基因的相互作用网络图计算点得分和边得分；然后通过得出的边得分和点得分来对每个通路进行计算权重，从而识别出重要的驱动突变通路，同时对通路中的基因进行排序选出重要的突变基因。针对选择的驱动通路和驱动基因，进行通路活性分析。并对不同亚型识别出的结果进行亚型特异性与共性分析。利用原始临床数据和驱动pathway结果进行生存分析。最后根据基因本体论富集分析验证得到有显著意义的驱动突变。实验结果表明本文提出的方法能够识别出有效的亚型驱动突变，为特定的治疗策略有着重要的指导意义。
+
+
+
+
+
+
+
+
+
+
+
+
+
+

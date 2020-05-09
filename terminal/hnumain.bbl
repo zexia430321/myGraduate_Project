@@ -1,0 +1,391 @@
+\begin{thebibliography}{10}
+
+\bibitem{1}
+\newblock International Technology Roadmap for Semiconductors 2005 Edition Executive Summary,
+\newblock http://www.itrs.net/Links/2005ITRS/ExecSum2007.pdf.
+
+\bibitem{2}
+\newblock 我国集成电路产业发展分析. 
+\newblock http://www.chinairn.com/doc/70270/229278.html.
+
+\bibitem{3}
+\newblock 完善集成电路产业链,增强核心产业自主性集成电路“十一 五”专项规划解读.
+\newblock http://www.china.com.cn/policy/txt/2008-01/10/content9509005.htm.
+
+\bibitem{4}
+Semiconductor Industry Association (SIA) .
+\newblock Test Equipment, International Technology Roadmap for Semiconductors (ITRS) 2006 Update [R].
+\newblock 2006, http://public.itrs.net/
+
+\bibitem{5}
+Sehgal A, Chakrabarty K.
+\newblock Optimization of Dual-Speed TAM Architectures for Efficient Modular Testing of SoCs [J].
+\newblock IEEE Trans. On Computers, 2007, 56(1):120--133
+
+\bibitem{6}
+Sheng s, Hsiao MS.
+\newblock Success-driven learning in ATPG for preimage computation [J].
+\newblock IEEE Design and Test of Computers, 2004, 21(6):504--512
+
+\bibitem{7}
+Verigy Agilent 93000 Flexible Parallel Test Solution for Power Estimation [J].
+\newblock http://www.verigy.com/content/dav/verigy/Internet/Products/V93000%20SoC%20Series/5989-2598EN.pdf,
+\newblock  2006.
+  
+\bibitem{8}
+Hashempour H, Lombardi F.
+\newblock Application of Arithmetic Coding to Compression of VLSI Test Data [J].
+\newblock IEEE Trans. On Compt, 2005, 54(9):1166--1178
+
+\bibitem{9}
+Saiki T, Ichihara H, Inoue T.
+\newblock A Reconfgrale Embedded Decompressor for Test Compression [C].
+\newblock Los Alamitos, California, USA: Proceedings of the Third IEEE International Workshop on DELTA'06, 2006
+ 
+\bibitem{10}
+Hashempour H, Lombardi F.Moussa, M. Diaz Nava.
+\newblock “Analyzing the Cost of the Design for Reuse”, <Reuse Techniquesfor VLSI Design>.
+\newblock Kluwer Academic Publishers, 1999
+
+\bibitem{11}
+Burch R, Najm F, Yang P, et al.
+\newblock A Monte Carlo Approach for Power Estimation [J].
+\newblock IEEEд19 Trans. On VLSI Systems, 1993, 1(3):63--71
+
+\bibitem{12}
+Hsiao MS, Rudnick EM, Patel JH.
+\newblock Effects of Delay Models on Peak Power Estimation of VLSI Sequential Circuits  [C].
+\newblock Los Alamitos, California, USA: Proc.  Int'l Conf. Computer-Aided Design (ICCAD), 1997:45--51. 
+
+\bibitem{13}
+Yoon M.
+\newblock Sequence-Switch Coding for Low-Power Data Transmission [J].
+\newblock On ,39a1 VLSI Systems, 2004, 12(12):1048--1051.
+
+\bibitem{14}
+Zhang H, George V, Rabaey JM.
+\newblock Low swing on-chip signaling techniques: effectiveness and robustness [J].
+\newblock IEEE Trans. On VLSI Systems, 2000, 8(6):264--272.
+
+\bibitem{15}
+Shin Y, Chae SI, Choi K.
+\newblock Partial a bus-invert coding for a power optimization of application-specific systems [J].
+\newblock IEEE Trans. VLSI Systems, 2001, 9(4):377--383.  
+
+\bibitem{16}
+Lin RB, Tsai CM.
+\newblock Weight-based bus invert coding for low power applications [C].
+\newblock Los Alamitos, California, USA: In Proc. ASP-DAC VLSI Design, 2002:21--125.
+
+\bibitem{17}
+Mousa M, NavaD.
+\newblock Reuse Tchiues for VLSI Design IM.
+\newblock Kluwer Academic Publishers, 1999, 86--90.
+
+\bibitem{18}
+Pateras S.
+\newblock A Comparison of Structural Test Approaches CI.Los Alamitos, Califormia,
+\newblock USA: Electronics Manufacturing  Technology  Symposium, IEEE/CPMT/SEMI 29thInternational, 2004:206--221.
+
+\bibitem{19}
+Miron Abramovici, Melvin A.
+\newblock Breuer, Arthur D. Friedman, <Digital Systems Testing and Testable Design>.
+\newblock 北京:清华大学出版社, 2004, 1(3):63--71.
+
+\bibitem{20}
+Burch R, Najm F, Yang P, et al.
+\newblock Fujiwara, H "Logic Tsing and Design for Testability,” MIT Pres.
+\newblock Cambridge MA.1986. 66--87
+
+\bibitem{21}
+MeCluskey, E. J. and s.
+\newblock Brzxrs-Nesbat“Design for Autonomous Test" IEE Trans. Compute, Vol.
+\newblock 1981, C-30, No. 11, 866--875.
+
+\bibitem{22}
+Roth J P.
+\newblock Diagnosis of Automata Failures: A Calculus and a Method.
+\newblock IBM Journal of Research and Development, 1966, 10(4):278--291.
+
+\bibitem{23}
+Goel P.
+\newblock An Implicit Enumeration Algorithm to Generate Tests for Combinational Logic Circuits.
+\newblock IEEE Transactions on Computers, 1981, 30(3):215--222. 
+
+\bibitem{24}
+Williams, T. W. and J. B. Angel,
+\newblock “Enhancing Testability of Large Scale Integrated Circuit via Test Points and Additional Logic," IEEE Trans.
+\newblock Comput, 1973, Vol. C-22, No.1, 46--60. 
+
+\bibitem{25}
+Eichelberger, E. B., and Williams, T. w.
+\newblock A Logic Design Structure for LSI Testability," Proc.
+\newblock Design Automation Conf, 1977, 462--468.
+
+\bibitem{26}
+Bennetts, R. G.
+\newblock "Design of Testable Logic Circuits,"
+\newblock Addison-Wesley, Reading, MA, 1984, P.164.
+
+\bibitem{27}
+Agrawal V D ,Kime C R,Saluja K.
+\newblock Tutorial on Built-In-Self-Test,Partl Principles．
+\newblock Journal of DesignandTest of Computers．1993, 10(1)：73--82  
+
+\bibitem{28}
+Agrawal V D,Kime C R,Saluja K．
+\newblock A Tutorial on Built—In—Self-Test,Part2 Application．
+\newblock Journal of DesignandTest of Computers.1993, 10(21):69--77
+
+\bibitem{29}
+Agrawal V D,Kime C R,Saluja KArmstrong D B.
+\newblock A Deductive Method for Simulating Faults in Logic Circuits.
+\newblock Computers IEEE Transactions on, 1972, C-21 (5):464-471
+
+\bibitem{30}
+El-Maleh A H, Al-Abaji R H.
+\newblock Extended frequency-directed run-length code with improved application to system-on-a-chip test data compression.
+\newblock In: Proc of International Conference on Electronics, Circuits and Systems. IEEE, vol.2 2002:449--452 
+
+\bibitem{31}
+Horowitz,Hill.
+\newblock The Art of Electronics,2nd Edition.
+\newblock 1999：665--667
+
+\bibitem{32}
+Koenemann B.
+\newblock LFSR-coded test patterns for scan design.
+\newblock In：Proc of European Test Conference, 1991, 237--242
+
+\bibitem{33}
+王伟征, 邝继顺, 尤志强, 等.
+\newblock 一种基于轮流扫描捕获的低功耗低费用 BIST 方法.
+\newblock 计算机研究与发展, 2012, 49(4):864--872
+
+\bibitem{34}
+何山.
+\newblock BIST原理和设计方法.
+\newblock 中国造船工程学会，2008,9（1）：65--67
+
+\bibitem{35}
+陈小保,邢座程,李少青.
+\newblock 星载处理器流水线的 BIST 设计方法.
+\newblock 中国计算机学会,2007:302--305
+
+\bibitem{36}
+Chandra A, Chakrabarty K.
+\newblock Test Resource Partitioning for SOCs.
+\newblock IEEE Design \& Test of Computers, 2001, 18(5):80--91
+
+\bibitem{37}
+Chakrabarty K, Iyengar V, Chandra A.
+\newblock Test Resource Partitioning.
+\newblock est Resource Partitioning for System-on-a-Chip. Springer US, 2002, 619--622
+
+\bibitem{38}
+Wurtenberger A, Rosinger P, Al-Hashimi B M, et al.
+\newblock Cost model driven test resource partitioning for socs.
+\newblock Electronics Letters, 2006, 42(16):915--916.
+   
+\bibitem{39}
+A. Jas and N.A. Touba.
+\newblock "Test Vector Compression via Cyclical Scan Chains and Its工程硕士学位论文 Application to Testing Core-Based Designs,"
+\newblock Proc. Int’l Test Conf. (ITC 98), IEEE CS Press, 1998, pp. 458--464 
+
+\bibitem{40}
+Anshuman,Chandra Krishnendu,Chakrabarty.
+\newblock "Efficient test data compression and decompression for system-on-a-chip,"
+\newblock using internal scan chains and golomb codingMunich,2001:145--149..
+
+\bibitem{41}
+Chandra A, Chakrabarty K. 
+\newblock Test Data Compression and Test Resource Partitioning for System-on-a-Chip Using Frequency-Directed Run-Length (FDR) Codes.
+\newblock IEEE Transactions on Computers, 2003, 52(8):1076--1088.
+
+\bibitem{42}
+El-Maleh A H. 
+\newblock Test data compression for system-on-a-chip using extended frequency-directed run-length code.
+\newblock Computers \& Digital Techniques Iet, 2008, 2(3):155--163
+
+\bibitem{43}
+Usha S. Mehta, Kankar S. Dasgupta2, Niranjan M.  
+\newblock Hamming Distance Based Reordering and Columnwise Bit Stuffing with Difference Vector:
+\newblock Devashrayee.A Better Scheme for Test Data Compression with Run Length Based Codes.India,2110:33--38
+
+\bibitem{44}
+Barber M, Loranger M.
+\newblock Test Resource Partitioning.
+\newblock IEEE Design \& Test of Computers．2000,17(3):126--132 
+
+\bibitem{45}
+WEI LI,XUAN YANG,ZIBIN DAI. 
+\newblock Research on design of a reconfigurable parallel structure targeted at LFSR[C].
+\newblock 2011:59--63
+
+\bibitem{46}
+Ruan X, Katti R S.  
+\newblock Data-Independent Pattern Run-Length Compression for Testing Embedded Cores in SoCs.
+\newblock IEEE Transactions on Computers, 2007, 56(4):545--556.
+
+\bibitem{47}
+Armstrong D B. 
+\newblock A Deductive Method for Simulating Faults in Logic Circuits Computers IEEE Transactions on,
+\newblock 1972, C-21 (5):464--471
+
+\bibitem{48}
+ El-Maleh A H, Al-Abaji R H. 
+\newblock Extended frequency-directed run-length code with improved application to system-on-a-chip test data compression.
+\newblock IEEE,2002:449--452 vol.2
+
+\bibitem{49}
+Horowitz,Hill．
+\newblock The Art of Electronics,
+\newblock 2nd Edition,1999：665--667. 
+
+\bibitem{50}
+ Koenemann B．
+\newblock LFSR—coded test patterns for scan design．
+\newblock In：Proc of European Test Conference,1991,237--242 
+
+\bibitem{51}
+Omaña, M, Rossi, D, Fuzzi F, et al.  
+\newblock Novel approach to reduce power droop during scan-based logic BIST.
+\newblock IEEE, 2013:1--6
+  
+\bibitem{52}
+Kavousianos X, Kalligeros E, Nikolos D.  
+\newblock Optimal Selective Huffman Coding for Test-Data Compression.
+\newblock IEEE Transactions on Computers, 2007, 56(8):1146--1152
+
+\bibitem{53}
+Gonciari PT,A1 Hashimi B,Nicolici N．
+\newblock Improving compression ratio,area overhead and test application time for system-on-a-chip test data compression decompression．
+\newblock Design,Automation \& Test in Europe Conference,2002,604--611
+
+\bibitem{54}
+Jas A, Touba N A. Test Vector Decompression via Cyclical Scan Chains and Its Application to Testing Core-Based Designs.
+\newblock Proc.int.test Conf.
+\newblock 1998:458--464.
+ 
+\bibitem{55}
+Chandra A, Member S, Chakrabarty K, et al.
+\newblock System-on-a-chip test-data compression and decompression architectures based on Golomb codes.
+\newblock IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, 2006, 20(3):355--368.
+
+\bibitem{56}
+Chandra A, Chakrabarty K.
+\newblock Test Data Compression and Test Resource Partitioning for System-on-a-Chip Using Frequency-Directed Run-Length (FDR) Codes.
+\newblock IEEE Transactions on Computers, 2003, 52(8):1076--1088.
+ 
+\bibitem{57}
+El-Maleh A H.
+\newblock Test data compression for system-on-a-chip using extended frequency-directed run-length code.
+\newblock Iet Computers and Digital Techniques, 2008, 2(3):155--163.
+
+\bibitem{58}
+Chandra A, Chakrabarty K.
+\newblock A unified approach to reduce SOC test data volume, scan power and testing time.
+\newblock Computer-Aided Design of Integrated Circuits and Systems, IEEE Transactions on, 2003, 22(3):352--363.
+  
+\bibitem{59}
+Jas A, Ghosh-dastidar J, Ng M, et al.
+\newblock An efficient test vector compression scheme using selective Huffman coding.
+\newblock IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, 2003, 22(6):797--806.
+  
+\bibitem{60}
+Kavousianos X, Kalligeros E, Nikolos D.
+\newblock Optimal Selective Huffman Coding for Test-Data Compression.
+\newblock IEEE Transactions on Computers, 2007, 56(8):1146--1152
+
+\bibitem{61}
+Kavousianos, Xrysovalantis, Emmanouil Kalligeros, and Dimitris Nikolos.
+\newblock Multilevel Huffman coding: an efficienttest-data compression method for IP cores.Computer-Aided Design of Integrated Circuits and Systems.
+\newblock IEEE Transactions on,2007,26(6): 1070-1083
+
+\bibitem{62}
+Kavousianos X, Kalligeros E, Nikolos D.
+\newblock Multilevel-Huffman test-data compression for IP cores with multiple scan chains.
+\newblock Very Large Scale Integration Systems IEEE Transactions on, 2008, 16(7):926--931
+  
+\bibitem{63}
+Kavousianos X, Kalligeros E, Nikolos D.
+\newblock Test Data Compression Based on Variable-to-Variable Huffman Encoding With Codeword Reusability. Computer-Aided Design of Integrated Circuits and Systems.
+\newblock IEEE Transactions on, 2008, 27(7):1333--1338
+
+\bibitem{64}
+Tehranipoor M, Nourani M, Chakrabarty K.
+\newblock Nine-coded compression technique for testing embedded cores in socs.
+\newblock Very Large Scale Integration Systems IEEE Transactions on, 2005, 13(6):719--731
+
+\bibitem{65}
+Lin S, Chung-Len Lee, Chen J, et al.
+\newblock A multilayer data copy test data compression scheme for reducing shifting-in power for multiple scan design.
+\newblock Very Large Scale Integration Systems IEEE Transactions on, 2007, 15(7):767--776
+
+\bibitem{66}
+El-Maleh A H.
+\newblock Efficient test compression technique based on block merging.
+\newblock Iet Computers and Digital Techniques, 2008, 2(5):327--335
+
+\bibitem{67}
+Wu Tie-Bin, Liu Heng-Zhu, Liu Peng-Xia.
+\newblock Efficient Test Compression Technique for SoC Based on Block Merging and Eight Coding.
+\newblock Journal of Electron Test, 2013, 29:849–-859
+ 
+\bibitem{68}
+Sinanoglu O. Scan Architecture With Align-Encode.
+\newblock IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems.
+\newblock 2008, 27(12):2303--2316.
+
+\bibitem{69}
+Wang Z, Chakrabarty K.
+\newblock Test data compression using selective encoding of scan slices.
+\newblock IEEE Transactions on Very Large Scale Integration Systems, 2008, 16(11):1429--1440.
+
+\bibitem{70}
+Hamzaoglu I, Patel J H.
+\newblock Reducing Test Application Time for Full Scan Embedded Cores.
+\newblock International Symposium on Fault-tolerant Computing. 1999:260
+
+\bibitem{71}
+Brglez F, Bryan D, Kozminski K.
+\newblock Combinational Profiles Of Sequential Benchmark Circuits.
+\newblock Circuits and Systems IEEE International Symposium on, 1989, 3:1929--1934
+
+\bibitem{72}
+Sinanoglu O.
+\newblock Scan Architecture With Align-Encode.
+\newblock IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, 2008, 27(12):2303--2316.
+ 
+\bibitem{73}
+梁华国, 蒋翠云, 罗强.
+\newblock 应用对称编码的测试数据压缩解压方法.
+\newblock 计算机研究与发展, 2011, 48(12):2391--2399
+
+\bibitem{74}
+程一飞, 詹文法.
+\newblock 长度折半的测试资源编码方法.
+\newblock 电子测量与仪器学报,2016, 30(3):480--486
+
+\bibitem{75}
+Yuan Haiying, Mei Jiaping, Song Hongying.
+\newblock Test Data Compression for System-on-a-Chip using Count Compatible Pattern Run-Length Coding.
+\newblock Journal of Electron Test, 2014, 30:237--242
+
+\bibitem{76}
+秦光睿.
+\newblock 多次随机变换拆分测试激励压缩方法研究[D].
+\newblock 2018
+
+\end{thebibliography}
+
+
+
+
+
+
+
+
+
+
+
